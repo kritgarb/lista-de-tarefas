@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-
 # Lista de Tarefas Web App
 
 Este é um aplicativo web simples para gerenciar uma lista de tarefas. Os usuários podem adicionar, excluir, concluir e visualizar suas tarefas de forma fácil e intuitiva.
