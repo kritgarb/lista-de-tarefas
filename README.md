@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 # Lista de Tarefas Web App
 
@@ -77,3 +78,6 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas ou env
 - [@kritgarb](https://www.github.com/kritgarb)
 
 
+=======
+# Lista de Tarefas feito com Python
+>>>>>>> b1dc3ae15ee45e3cd34fe3989461d734db1e5477
