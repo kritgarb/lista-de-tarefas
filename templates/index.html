@@ -1,0 +1,43 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">Lista de Tarefas</h1>
+        <ul id="task-list" class="list-group mt-4">
+            {% for task in tasks %}
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <span class="task-text">{{ task.text }}</span>
+                    <div class="actions">
+                        <button type="button" class="btn btn-danger btn-sm" onclick="confirmDelete(this)">Excluir</button>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <form class="mt-4" action="{{ url_for('add') }}" method="post">
+            <div class="form-group">
+                <label for="task">Nova Tarefa:</label>
+                <input type="text" id="task" name="task" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Adicionar</button>
+        </form>
+    </div>
+
+    <script>
+        function confirmDelete(button) {
+            var taskItem = button.closest('li');
+            var task = taskItem.querySelector('.task-text').textContent;
+            if (confirm(`Tem certeza que deseja excluir a tarefa "${task}"?`)) {
+                taskItem.remove();
+            }
+        }
+    </script>
+</body>
+</html>

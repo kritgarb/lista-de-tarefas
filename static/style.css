@@ -1,0 +1,96 @@
+/* static/style.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Altere de min-height para height */
+}
+
+h1 {
+    color: #343a40;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 400px; /* Defina o tamanho máximo desejado para a caixa de tarefas */
+    text-align: center; /* Centraliza o conteúdo dentro da caixa */
+}
+
+
+/* Restante do código CSS */
+
+
+ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    max-width: 400px;
+}
+
+li {
+    background-color: #ffffff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+a {
+    color: #dc3545;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.list-group-item {
+    transition: opacity 0.3s ease-in-out;
+}
+
+.fade-out {
+    opacity: 0;
+}
+
+.added-task {
+    background-color: #d4edda; /* Cor de fundo para destacar a adição */
+    transition: background-color 1s ease-in-out;
+}
